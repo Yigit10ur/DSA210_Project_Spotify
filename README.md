@@ -63,9 +63,3 @@ Our findings aim to provide insights into seasonal music discovery trends and he
   - GitHub for version control
 
 ---
-
-## How to Run
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/<your-username>/spotify-discovery-analysis.git
-   cd spotify-discovery-analysis
