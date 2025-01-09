@@ -1,94 +1,71 @@
-# Past Spotify Listening History and Changes in Mood Analysis
+# Spotify Data Analysis: New Song Discovery Patterns
 
 ## Project Overview
-My name is Yiğit Onur Yılmaz (Student ID: 31981) and I am a sophomore Computer Science student in Sabancı University. Here is DSA 210 term project details which utilizes my raw Spotify data which is requested from Spotify's official website. This project analyzes my Spotify listening history over past years to assess mood changes based on the genres of music I listened to. Using Python, the data is processed to group each track by genre, allowing for a data-driven exploration of personal mood trends over time.
+This project investigates user behavior on Spotify by analyzing when users are most likely to discover and add new songs to their playlists. Using historical Spotify technical log data, we test the hypothesis that specific time periods (e.g., holiday seasons or summer) influence new song discovery rates. 
 
-## Features
-- Extract and preprocess Spotify listening history data.
-- Classify tracks into genres using a Python-based grouping algorithm.
-- Visualize genre distribution and trends over time to infer mood changes.
-- Manage and track project progress using version control with GitHub.
+Our findings aim to provide insights into seasonal music discovery trends and help enhance user recommendations and marketing strategies.
 
 ---
 
-## Table of Contents
-1. [Project Motivation](#project-motivation)
-2. [Data Collection](#data-collection)
-3. [Methodology](#methodology)
-4. [Technologies Used](#technologies-used)
-5. [Visualizations](#visualizations)
-6. [Expected Outcomes](#expected-outcomes)
+## Hypothesis
+**Hypothesis**: Users are more likely to discover new songs during specific periods of the year.
+
+- **Null Hypothesis (\(H_0\))**: New song additions are uniformly distributed across the year.
+- **Alternative Hypothesis (\(H_1\))**: New song additions vary significantly during specific time periods.
 
 ---
 
-## Project Motivation
-Music is a powerful reflection of emotions and moods. Most people associate particular emotions with particular music genres. 
-By analyzing the genres of songs I’ve listened to, this project aims to:
-- Gain insights into personal mood shifts over time.
-- Understand the role of music genres in mood regulation.
-- Apply data science techniques for a real-world, personalized analysis.
+## Objectives
+1. Analyze Spotify listening history and identify patterns in new song discoveries.
+2. Visualize trends in song discovery rates across months and seasons.
+3. Perform statistical testing to validate the hypothesis using p-value analysis.
 
 ---
 
-## Data Collection
-The project uses Spotify's data export feature to retrieve my listening history. Key attributes include:
-- **Track Name**
-- **Artist**
-- **Listening Timestamp**
-- **Track Duration**
-
-### Genre Mapping
-Genres are classified based on artist information using the Spotify Web API or a pre-defined dataset for mapping artists to genres.
+## Data Description
+- **Source**: Spotify technical log data
+- **Fields Extracted**:
+  - `Timestamp`: When the song was added to the playlist
+  - `Song ID`: Unique identifier for each song
+  - `User ID` (optional): Identifier for user activity
+  - Other song attributes (e.g., genre, popularity, release date)
 
 ---
 
 ## Methodology
-1. **Data Preprocessing**: 
-   - Clean and format the raw Spotify data for analysis.
-   - Handle missing or incorrect entries.
+1. **Data Preprocessing**:
+   - Clean and structure raw Spotify log data.
+   - Extract time-based features such as month and season.
+   - Remove duplicate song entries.
+   
+2. **Exploratory Data Analysis (EDA)**:
+   - Identify patterns in new song discoveries over time.
+   - Visualize trends using bar charts, line graphs, and heatmaps.
+   
+3. **Hypothesis Testing**:
+   - Conduct statistical tests (e.g., ANOVA) to evaluate seasonal variation in song discovery rates.
+   - Determine p-values to validate the hypothesis.
 
-2. **Genre Grouping**:
-   - Match each track to a genre using a Python script.
-   - Utilize libraries such as `spotipy` for API-based genre retrieval.
-
-3. **Trend Analysis**:
-   - Aggregate listening data by genre over time.
-   - Visualize trends to assess correlations with mood.
-
-4. **Mood Assessment**:
-   - Infer mood patterns based on dominant genres.
+4. **Results and Insights**:
+   - Summarize findings with clear visualizations.
+   - Discuss implications of seasonal discovery trends.
 
 ---
 
-## Technologies Used
-- **Programming Language**: Python
+## Tech Stack
+- **Languages**: Python
 - **Libraries**:
-  - Data Handling: `pandas`, `numpy`
-  - Visualization: `matplotlib`
-  - API Interaction: `spotipy`
-- **Version Control**: Git and GitHub
+  - Data Analysis: `pandas`, `numpy`
+  - Visualization: `matplotlib`, `seaborn`, `plotly`
+  - Statistical Testing: `scipy.stats`
+- **Tools**:
+  - Jupyter Notebook
+  - GitHub for version control
 
 ---
 
-## Visualizations
-
-### Here is a descriptive table for showing which type of table will be used for displaying certain aspect of the data.
-
-| **Visualization**        | **Description**                                                                                          | **Example Chart Type**     |
-|---------------------------|----------------------------------------------------------------------------------------------------------|----------------------------|
-| **Genre Distribution**    | Displays the percentage of total listening time spent on different music genres.                        | Pie Chart                  |
-| **Mood Analysis**         | Links genres to inferred moods, highlighting dominant moods during specific time periods.               | Heatmap or Bar Chart       |
-| **Listening Frequency**   | Analyzes the number of tracks played daily, weekly, or monthly to identify periods of increased activity.| Histogram or Line Chart    |
-
----
-
-## Expected Outcomes
-
-By creating this project, I aim to:
-
-- Visualize trends in my music listening behavior over time.
-- Quantify the relationship between listening frequency and mood changes.
-- Identify favorite genres and their share of total listening time.
-- Examine whether certain genres are associated with specific moods.
-- Illustrate if there is a correlation between listening patterns and seasonal trends.
-
+## How to Run
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/<your-username>/spotify-discovery-analysis.git
+   cd spotify-discovery-analysis
