@@ -69,7 +69,7 @@ Our findings aim to provide insights into seasonal music discovery trends and he
 We conducted a chi-squared test to evaluate whether new song additions on Spotify are uniformly distributed across months.
 
 - **Chi-squared Value (\( \chi^2 \))**: 20.113
-- **P-value**: 0.00047
+- P-value: 0.00047
 
 **Interpretation**:
 - Since \( \text{P-value} < 0.05 \), we reject the null hypothesis (\(H_0\)), indicating that new song additions are **not uniformly distributed** and vary significantly across months. This supports our alternative hypothesis (\(H_1\)) that specific time periods influence song discovery rates.
