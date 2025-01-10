@@ -72,5 +72,5 @@ We conducted a chi-squared test to evaluate whether new song additions on Spotif
 - P-value: 0.00047
 
 **Interpretation**:
-- Since \( \text{P-value} < 0.05 \), we reject the null hypothesis (\(H_0\)), indicating that new song additions are **not uniformly distributed** and vary significantly across months. This supports our alternative hypothesis (\(H_1\)) that specific time periods influence song discovery rates.
+- Since \( {P-value} < 0.05 \), we reject the null hypothesis (\(H_0\)), indicating that new song additions are **not uniformly distributed** and vary significantly across months. This supports our alternative hypothesis (\(H_1\)) that specific time periods influence song discovery rates.
 
